@@ -29,7 +29,8 @@ SECRET_KEY = 'django-insecure--tij52u@6ha=2hr!)9!e$d-db()5qzh4r*fub031u=g5akgm$o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['.herokuapp.com']
+ALLOWED_HOSTS = ['django-blog-saborbrasileiro.herokuapp.com', '.herokuapp.com', '127.0.0.1', 'localhost']
+
 
 
 # Application definition
@@ -41,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'recipes'
 ]
 
 MIDDLEWARE = [
