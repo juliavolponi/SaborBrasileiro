@@ -30,11 +30,11 @@ SECRET_KEY = 'django-insecure--tij52u@6ha=2hr!)9!e$d-db()5qzh4r*fub031u=g5akgm$o
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'your-heroku-app.herokuapp.com',  # Replace with your actual Heroku app name
+    'django-blog-SaborBrasileiro.herokuapp.com',
     '.herokuapp.com',
     '127.0.0.1',
     'localhost',
-    'juliavolpon-djangoblogs-408vcojcvr7.ws.codeinstitute-ide.net',  # Gitpod URL
+    '8000-juliavolpon-djangoblogs-408vcojcvr7.ws.codeinstitute-ide.net',
 ]
 
 
