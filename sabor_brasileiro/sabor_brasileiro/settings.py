@@ -29,7 +29,13 @@ SECRET_KEY = 'django-insecure--tij52u@6ha=2hr!)9!e$d-db()5qzh4r*fub031u=g5akgm$o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['django-blog-saborbrasileiro.herokuapp.com', '.herokuapp.com', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = [
+    'your-heroku-app.herokuapp.com',  # Replace with your actual Heroku app name
+    '.herokuapp.com',
+    '127.0.0.1',
+    'localhost',
+    'juliavolpon-djangoblogs-408vcojcvr7.ws.codeinstitute-ide.net',  # Gitpod URL
+]
 
 
 
