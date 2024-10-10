@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from blog import views as blog_views
+from .views import recipe_list, recipe_detail, recipe_create, recipe_update, recipe_delete
 
 urlpatterns = [
-    path("blog/", blog_views.my_blog, name='blog'),
-    path('admin/', admin.site.urls),
+   path('', recipe_list, name='recipe_list'),
+    path('recipe/<int:pk>/', recipe_detail, name='recipe_detail'),
+    path('recipe/new/', recipe_create, name='recipe_create'),
+    path('recipe/<int:pk>/edit/', recipe_update, name='recipe_update'),
+    path('recipe/<int:pk>/delete/', recipe_delete, name='recipe_delete'),
 ]
