@@ -1,4 +1,6 @@
 # from django.shortcuts import render
+from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
+from django.contrib.auth import login, logout, authenticate
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from .models import Recipe
@@ -59,6 +61,19 @@ def recipe_delete(request, pk):
     if request.user == recipe.author:
         recipe.delete()
     return redirect('recipe_list')
+
+# user authentication
+
+def signup_view(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect('recipe_list')  # Redirect to recipe list after signup
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/signup.html', {'form': form})
 
 
 
