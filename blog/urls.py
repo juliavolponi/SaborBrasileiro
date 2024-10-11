@@ -7,4 +7,5 @@ urlpatterns = [
     path('recipe/new/', views.recipe_create, name='recipe_create'),  # Page for creating a new recipe
     path('recipe/<int:pk>/edit/', views.recipe_update, name='recipe_update'),  # Page for editing a recipe
     path('recipe/<int:pk>/delete/', views.recipe_delete, name='recipe_delete'),  # Page for deleting a recipe
+    path('signup/', views.signup_view, name='signup'),  
 ]
