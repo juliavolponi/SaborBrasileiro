@@ -11,7 +11,7 @@ class Category(models.Model):
 class Recipe(models.Model):
     title = models.CharField(max_length=250)
     ingredients = models.TextField()
-    cooking_method = models.TextField()
+    instructions = models.TextField()
     author = models.ForeignKey(User, on_delete=models.CASCADE) # comments are deleted as well if a post is deleted
     categories = models.ManyToManyField(Category, related_name="recipes")  # Many-to-Many relationship
     created_at = models.DateTimeField(auto_now_add=True)

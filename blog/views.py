@@ -8,12 +8,12 @@ from .forms import RecipeForm
 
 def recipe_list(request):
     recipes = Recipe.objects.all()
-    return render(request, 'recipes/recipe_list.html', {'recipes': recipes})
+    return render(request, 'blog/recipe_list.html', {'recipes': recipes})
 
 
 def recipe_detail(request, pk):
     recipe = get_object_or_404(Recipe, pk=pk)
-    return render(request, 'recipes/recipe_detail.html', {'recipe': recipe})
+    return render(request, 'blog/recipe_detail.html', {'recipe': recipe})
 
 
 @login_required
