@@ -12,6 +12,7 @@ from .forms import RecipeForm
 class RecipeList(generic.ListView):
     queryset = Recipe.objects.all()
     template_name = "recipe_list.html"
+    context_object_name = 'recipes'
     
     
 
