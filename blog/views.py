@@ -3,14 +3,19 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, logout, authenticate
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
+from django.views import generic
 from .models import Recipe
 from .forms import RecipeForm
 
 # Create your views here.
 
-def recipe_list(request):
-    recipes = Recipe.objects.all()
-    return render(request, 'blog/recipe_list.html', {'recipes': recipes})
+class RecipeList(generic.ListView):
+    queryset = Recipe.objects.all()
+    template_name = "recipe_list.html"
+    
+    
+
+
 
 
 def recipe_detail(request, pk):
