@@ -1,3 +1,7 @@
+{% load static %}
+
+{% url 'home' as home_url %}
+
 <!DOCTYPE html>
 <html class="h-100" lang="en">
 
@@ -18,13 +22,13 @@
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 
-<body class="d-flex flex-column h-100 main-bg">
+<body class="d-flex flex-column h-100 ">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <nav class="navbar navbar-expand-lg ">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'recipe_list' %}">
                 <span class="brand">Sa<span class="red-o">bo</span>r<span class="thin">Brasileiro</span></span>
@@ -55,16 +59,16 @@
     </nav>
 
     <!-- Main content block -->
-    <main class="flex-shrink-0 main-bg">
+    <main class="flex-shrink-0">
         {% block content %}
        
         {% endblock content %}
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Made by Code Instituters</p>
-        <p class="m-0 text-center text-white">Follow us:
+    <footer class="footer mt-auto py-3 main-bg">
+        <p class="m-0 text-center">Made by Code Instituters</p>
+        <p class="m-0 text-center ">Follow us:
             <i class="fab fa-facebook-square ms-3"></i>
             <i class="fab fa-twitter-square ms-3"></i>
             <i class="fab fa-instagram-square ms-3"></i>
