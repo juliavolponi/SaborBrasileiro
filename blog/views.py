@@ -19,9 +19,28 @@ class RecipeList(generic.ListView):
 
 
 
-def recipe_detail(request, pk):
-    recipe = get_object_or_404(Recipe, pk=pk)
-    return render(request, 'blog/recipe_detail.html', {'recipe': recipe})
+def recipe_detail(request, slug):
+    """
+    Display an individual :model:`blog.Recipe`.
+
+    **Context**
+
+    ``post``
+        An instance of :model:`blog.Recipe`.
+
+    **Template:**
+
+    :template:`blog/recipe_detail.html`
+    """
+
+    queryset = Recipe.objects.filter(status=1)
+    recipe = get_object_or_404(queryset, slug=slug)
+
+    return render(
+        request,
+        "blog/recipe_detail.html",
+        {"recipe": recipe},
+    )
 
 
 @login_required
