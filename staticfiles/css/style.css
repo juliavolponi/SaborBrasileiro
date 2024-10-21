@@ -10,6 +10,7 @@ body {
     color: rgb(221, 221, 25)
 }
 
+
 .red-o {
     color: #fff
 }
@@ -18,9 +19,6 @@ body {
     font-weight: 300;
 }
 
-.light-bg {
-    background-color: 
-}
 
 .dark-bg {
     background-color: #445261;
@@ -81,19 +79,6 @@ body {
     overflow: hidden;
 }
 
-.masthead-image:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 90%;
-    height: 100%;
-    width: 150%;
-    background: yellow
-    -webkit-transform: skew(15deg);
-    -moz-transform: skew(15deg);
-    transform: skew(15deg);
-    z-index: 100;
-}
 
 .post-link {
     text-decoration: none;
