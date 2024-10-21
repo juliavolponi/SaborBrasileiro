@@ -120,7 +120,7 @@ body {
 }
 
 .link {
-    color: #fff;
+    color: #FFFF33;
     text-decoration: none;
 }
 
@@ -163,4 +163,8 @@ body {
 
 form.login label {
     color: #fff;
+}
+
+form.signup {
+    color: #fff !important;  
 }
