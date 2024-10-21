@@ -18,7 +18,9 @@ body {
     font-weight: 300;
 }
 
-
+.text-white-custom {
+    color: #fff;
+}
 
 .dark-bg {
     background-color: #445261;
@@ -41,10 +43,6 @@ body {
     color: 	#FFFF33;
 }
 
-a.recipe-link {
-    text-decoration: none;
-}
-
 .image-container {
     position: relative;
 }
@@ -63,9 +61,10 @@ a.recipe-link {
 }
 
 .author {
-    color: white;
+    color: #fff;
     margin: 4px;
     text-transform: uppercase;
+    font-size: small;
 }
 
 .masthead {
@@ -88,22 +87,22 @@ a.recipe-link {
 }
 
 
-.post-link {
+.recipe-link {
     text-decoration: none;
     color: #fff
 }
 
-.post-link:hover,
+.recipe-link:hover,
 .page-link {
     color: #FFC72C;
 }
 
-.post-title {
+.recipe-title {
     margin-top: 10%;
     margin-left: 5%;
 }
 
-.post-subtitle {
+.recipe-subtitle {
     margin-left: 5%;
     color: lightgray;
 }
@@ -160,4 +159,8 @@ a.recipe-link {
 .navbar .nav-link,
 .navbar .navbar-brand {
     color: #fff 
+}
+
+form.login label {
+    color: #fff;
 }
