@@ -10,7 +10,6 @@ body {
     color: rgb(221, 221, 25)
 }
 
-
 .red-o {
     color: #fff
 }
@@ -18,6 +17,7 @@ body {
 .thin {
     font-weight: 300;
 }
+
 
 
 .dark-bg {
@@ -35,6 +35,14 @@ body {
 
 .card-text {
     color: #dbd6d6;
+}
+
+.card-title {
+    color: 	#FFFF33;
+}
+
+a.recipe-link {
+    text-decoration: none;
 }
 
 .image-container {

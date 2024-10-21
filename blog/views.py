@@ -25,7 +25,7 @@ def recipe_detail(request, slug):
 
     **Context**
 
-    ``post``
+    ``recipe``
         An instance of :model:`blog.Recipe`.
 
     **Template:**
