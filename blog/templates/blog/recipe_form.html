@@ -1,12 +1,15 @@
-{% extends 'base.html' %}
-
-{% block title %}Create Recipe{% endblock %}
+{% extends "base.html" %}
 
 {% block content %}
-    <h2>Create Recipe</h2>
+<div class="container mt-5">
+    <h2 class="mb-4">Add New Recipe</h2>
+
     <form method="POST">
         {% csrf_token %}
+        <!-- Render form with Bootstrap styling -->
         {{ form.as_p }}
-        <button type="submit">Submit</button>
+
+        <button type="submit" class="btn btn-primary mt-3">Submit Recipe</button>
     </form>
+</div>
 {% endblock %}
